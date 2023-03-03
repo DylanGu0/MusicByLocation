@@ -11,16 +11,21 @@ struct ContentView: View {
     @StateObject private var locationHandler = LocationHandler()
     
     var body: some View {
-        VStack {
-            Text("\(locationHandler.lastKnownLocality), \(locationHandler.lastKnownCountry)")
-                .padding()
+        Form {
+            Section {
+                    Text("\(locationHandler.lastKnownLocality), \(locationHandler.lastKnownCountry)")
+                        .padding()
+                        .frame(width: 350, alignment: .center)
+            }
+
             Button("Find music", action: {
                 locationHandler.requestLocation()
             })
+                .frame(width: 350, alignment: .center)
+                .onAppear(perform: {
+                    locationHandler.requestAuthorisation()
+                })
         }
-        .onAppear(perform: {
-            locationHandler.requestAuthorisation()
-        })
     }
 }
 
