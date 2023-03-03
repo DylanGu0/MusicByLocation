@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A224340F29B2A279006EC05C /* CLPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224340E29B2A279006EC05C /* CLPlacemark.swift */; };
+		A224341129B2A372006EC05C /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224341029B2A372006EC05C /* StateController.swift */; };
 		A24F545F29B20314005E2CDB /* MusicByLocationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F545E29B20314005E2CDB /* MusicByLocationApp.swift */; };
 		A24F546129B20314005E2CDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F546029B20314005E2CDB /* ContentView.swift */; };
 		A24F546329B20316005E2CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24F546229B20316005E2CDB /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A224340E29B2A279006EC05C /* CLPlacemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLPlacemark.swift; sourceTree = "<group>"; };
+		A224341029B2A372006EC05C /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		A24F545B29B20314005E2CDB /* MusicByLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicByLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24F545E29B20314005E2CDB /* MusicByLocationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicByLocationApp.swift; sourceTree = "<group>"; };
 		A24F546029B20314005E2CDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A224340D29B2A268006EC05C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A224340E29B2A279006EC05C /* CLPlacemark.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A24F545229B20314005E2CDB = {
 			isa = PBXGroup;
 			children = (
@@ -96,9 +108,11 @@
 		A24F545D29B20314005E2CDB /* MusicByLocation */ = {
 			isa = PBXGroup;
 			children = (
+				A224340D29B2A268006EC05C /* Extensions */,
 				A24F545E29B20314005E2CDB /* MusicByLocationApp.swift */,
 				A24F546029B20314005E2CDB /* ContentView.swift */,
 				A24F548829B203DF005E2CDB /* LocationHandler.swift */,
+				A224341029B2A372006EC05C /* StateController.swift */,
 				A24F546229B20316005E2CDB /* Assets.xcassets */,
 				A24F546429B20316005E2CDB /* Preview Content */,
 			);
@@ -263,6 +277,8 @@
 				A24F548929B203DF005E2CDB /* LocationHandler.swift in Sources */,
 				A24F546129B20314005E2CDB /* ContentView.swift in Sources */,
 				A24F545F29B20314005E2CDB /* MusicByLocationApp.swift in Sources */,
+				A224340F29B2A279006EC05C /* CLPlacemark.swift in Sources */,
+				A224341129B2A372006EC05C /* StateController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

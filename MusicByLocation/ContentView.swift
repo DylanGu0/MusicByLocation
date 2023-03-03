@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var locationHandler = LocationHandler()
+    @StateObject private var state = StateController()
     
     var body: some View {
         Form {
             Section {
-                    Text("\(locationHandler.lastKnownLocality), \(locationHandler.lastKnownCountry)")
+                    Text("\(state.lastKnownLocation)")
                         .padding()
                         .frame(width: 350, alignment: .center)
             }
 
             Button("Find music", action: {
-                locationHandler.requestLocation()
+                state.findMusic()
             })
                 .frame(width: 350, alignment: .center)
                 .onAppear(perform: {
-                    locationHandler.requestAuthorisation()
+                    state.requestAccessToLocationData()
                 })
         }
     }
