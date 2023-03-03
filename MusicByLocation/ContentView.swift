@@ -12,9 +12,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text(locationHandler.lastKnownLocation)
+            Text("\(locationHandler.lastKnownLocality), \(locationHandler.lastKnownCountry)")
                 .padding()
-            Spacer()
             Button("Find music", action: {
                 locationHandler.requestLocation()
             })

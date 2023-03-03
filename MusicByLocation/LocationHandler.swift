@@ -12,6 +12,8 @@ class LocationHandler: NSObject, CLLocationManagerDelegate, ObservableObject{
     let manager = CLLocationManager()
     let geocoder = CLGeocoder()
     @Published var lastKnownLocation: String = ""
+    @Published var lastKnownLocality: String = "City"
+    @Published var lastKnownCountry: String = "Country"
     
     override init() {
         super.init()
@@ -33,7 +35,8 @@ class LocationHandler: NSObject, CLLocationManagerDelegate, ObservableObject{
                     self.lastKnownLocation = "Could not perform lookup of location from coordinate information"
                 } else {
                     if let firstPlacemark = placemarks?[0] {
-                        self.lastKnownLocation = firstPlacemark.locality ?? "Couldn't find locality"
+                        self.lastKnownLocality = firstPlacemark.locality ?? "Couldn't find locality"
+                        self.lastKnownCountry = firstPlacemark.country ?? "Couldn't find country"
                     }
                 }
             })
