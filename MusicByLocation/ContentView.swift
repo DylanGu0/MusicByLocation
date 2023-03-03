@@ -24,6 +24,7 @@ struct ContentView: View {
                 .frame(width: 350, alignment: .center)
                 .onAppear(perform: {
                     state.requestAccessToLocationData()
+                    state.getArtists()
                 })
         }
     }
