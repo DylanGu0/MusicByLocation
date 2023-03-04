@@ -15,7 +15,7 @@ struct ContentView: View {
             Section {
                     Text("\(state.lastKnownLocation)")
                         .padding()
-                        .frame(width: 350, alignment: .center)
+                        .frame(width: 300, alignment: .center)
             }
 
             Button("Find music", action: {
