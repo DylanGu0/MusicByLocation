@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         Form {
             Section {
-                    Text("\(state.lastKnownLocation)")
+                    Text("\(state.artistsByLocation)")
                         .padding()
                         .frame(width: 300, alignment: .center)
             }
@@ -24,7 +24,6 @@ struct ContentView: View {
                 .frame(width: 350, alignment: .center)
                 .onAppear(perform: {
                     state.requestAccessToLocationData()
-                    state.getArtists()
                 })
         }
     }
